@@ -5,12 +5,13 @@
 		<groups>
 		</groups>
 		<classes>
-    
-			<class name="com.redbus.tests.HomePageFunctionalityTest" />
+
+
 			<class name="com.redbus.tests.RPoolFunctionalityTest" />
-			<class name="com.redbus.tests.BusHireTest" />
 			<class name="com.redbus.tests.BusTicketTest" />
+			<class name="com.redbus.tests.BusHireTest" />
 			<class name="com.redbus.tests.LoginTest" />
+			<class name="com.redbus.tests.HomePageFunctionalityTest" />
 
 		</classes>
 	</test> <!-- Test -->

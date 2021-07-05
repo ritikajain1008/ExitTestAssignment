@@ -1,32 +1,76 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite verbose="0" name="Failed suite [Command line suite]">
-  <test thread-count="5" verbose="0" name="Command line test(failed)">
+<suite guice-stage="DEVELOPMENT" verbose="0" name="Failed suite [Suite]" parallel="classes">
+  <test thread-count="5" verbose="0" name="classes(failed)" parallel="classes">
     <classes>
-      <class name="com.redbus.tests.BusHireTest">
+      <class name="com.redbus.tests.BusTicketTest">
         <methods>
           <include name="report"/>
           <include name="setExtent"/>
           <include name="endReport"/>
-          <include name="Initialize"/>
           <include name="openBrowser"/>
-          <include name="hireVehicle_Outstation"/>
+          <include name="Initialize"/>
+          <include name="BusTickets"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.redbus.tests.BusHireTest -->
+      </class> <!-- com.redbus.tests.BusTicketTest -->
+      <class name="com.redbus.tests.RPoolFunctionalityTest">
+        <methods>
+          <include name="report"/>
+          <include name="setExtent"/>
+          <include name="endReport"/>
+          <include name="openBrowser"/>
+          <include name="Initialize"/>
+          <include name="closeBrowser"/>
+          <include name="RPool"/>
+        </methods>
+      </class> <!-- com.redbus.tests.RPoolFunctionalityTest -->
       <class name="com.redbus.tests.LoginTest">
         <methods>
           <include name="report"/>
+          <include name="InvalidLoginFunctionality"/>
           <include name="setExtent"/>
           <include name="endReport"/>
-          <include name="Initialize"/>
           <include name="openBrowser"/>
+          <include name="Initialize"/>
+          <include name="ValidLoginFunctionality"/>
           <include name="ViewMyProfile"/>
           <include name="ViewMyTrips"/>
           <include name="closeBrowser"/>
           <include name="ViewWalletsAndCards"/>
         </methods>
       </class> <!-- com.redbus.tests.LoginTest -->
+      <class name="com.redbus.tests.HomePageFunctionalityTest">
+        <methods>
+          <include name="report"/>
+          <include name="setExtent"/>
+          <include name="sitelogoText"/>
+          <include name="openBrowser"/>
+          <include name="journeyForDreams"/>
+          <include name="cancelMyTicket"/>
+          <include name="endReport"/>
+          <include name="Initialize"/>
+          <include name="searchBuses"/>
+          <include name="closeBrowser"/>
+          <include name="amazonOffer"/>
+          <include name="Help"/>
+          <include name="redbusCares"/>
+          <include name="showMyTicket"/>
+        </methods>
+      </class> <!-- com.redbus.tests.HomePageFunctionalityTest -->
+      <class name="com.redbus.tests.BusHireTest">
+        <methods>
+          <include name="report"/>
+          <include name="setExtent"/>
+          <include name="endReport"/>
+          <include name="openBrowser"/>
+          <include name="Initialize"/>
+          <include name="car_hire"/>
+          <include name="hireVehicle_Outstation"/>
+          <include name="closeBrowser"/>
+          <include name="managebooking_cancel"/>
+        </methods>
+      </class> <!-- com.redbus.tests.BusHireTest -->
     </classes>
-  </test> <!-- Command line test(failed) -->
-</suite> <!-- Failed suite [Command line suite] -->
+  </test> <!-- classes(failed) -->
+</suite> <!-- Failed suite [Suite] -->

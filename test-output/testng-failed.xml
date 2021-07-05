@@ -3,78 +3,28 @@
 <suite parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" parallel="classes" name="classes(failed)">
     <classes>
+      <class name="com.redbus.tests.BusTicketTest">
+        <methods>
+          <include name="report"/>
+          <include name="setExtent"/>
+          <include name="endReport"/>
+          <include name="Initialize"/>
+          <include name="openBrowser"/>
+          <include name="BusTickets"/>
+          <include name="closeBrowser"/>
+        </methods>
+      </class> <!-- com.redbus.tests.BusTicketTest -->
       <class name="com.redbus.tests.RPoolFunctionalityTest">
         <methods>
           <include name="report"/>
           <include name="setExtent"/>
           <include name="endReport"/>
           <include name="siteOnGooglePlay"/>
-          <include name="openBrowser"/>
           <include name="Initialize"/>
+          <include name="openBrowser"/>
           <include name="closeBrowser"/>
-          <include name="RPool"/>
         </methods>
       </class> <!-- com.redbus.tests.RPoolFunctionalityTest -->
-      <class name="com.redbus.tests.BusTicketTest">
-        <methods>
-          <include name="report"/>
-          <include name="setExtent"/>
-          <include name="endReport"/>
-          <include name="openBrowser"/>
-          <include name="Initialize"/>
-          <include name="BusTickets"/>
-          <include name="closeBrowser"/>
-        </methods>
-      </class> <!-- com.redbus.tests.BusTicketTest -->
-      <class name="com.redbus.tests.HomePageFunctionalityTest">
-        <methods>
-          <include name="report"/>
-          <include name="setExtent"/>
-          <include name="sitelogoText"/>
-          <include name="openBrowser"/>
-          <include name="journeyForDreams"/>
-          <include name="cancelMyTicket"/>
-          <include name="endReport"/>
-          <include name="Initialize"/>
-          <include name="searchBuses"/>
-          <include name="closeBrowser"/>
-          <include name="amazonOffer"/>
-          <include name="Help"/>
-          <include name="redbusCares"/>
-          <include name="showMyTicket"/>
-        </methods>
-      </class> <!-- com.redbus.tests.HomePageFunctionalityTest -->
-      <class name="com.redbus.tests.BusHireTest">
-        <methods>
-          <include name="report"/>
-          <include name="setExtent"/>
-          <include name="endReport"/>
-          <include name="openBrowser"/>
-          <include name="Initialize"/>
-          <include name="car_hire"/>
-          <include name="hireVehicle_Outstation"/>
-          <include name="closeBrowser"/>
-          <include name="managebooking_cancel"/>
-          <include name="offers"/>
-          <include name="minibuses_hire"/>
-          <include name="tempotraveller_hire"/>
-        </methods>
-      </class> <!-- com.redbus.tests.BusHireTest -->
-      <class name="com.redbus.tests.LoginTest">
-        <methods>
-          <include name="report"/>
-          <include name="InvalidLoginFunctionality"/>
-          <include name="setExtent"/>
-          <include name="endReport"/>
-          <include name="openBrowser"/>
-          <include name="Initialize"/>
-          <include name="ValidLoginFunctionality"/>
-          <include name="ViewMyProfile"/>
-          <include name="ViewMyTrips"/>
-          <include name="closeBrowser"/>
-          <include name="ViewWalletsAndCards"/>
-        </methods>
-      </class> <!-- com.redbus.tests.LoginTest -->
     </classes>
   </test> <!-- classes(failed) -->
 </suite> <!-- Failed suite [Suite] -->

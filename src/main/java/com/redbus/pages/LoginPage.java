@@ -5,6 +5,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 public class LoginPage {
 
@@ -21,7 +23,7 @@ public class LoginPage {
 	@FindBy(how = How.XPATH, using = "//li[@id='signInLink']")
 	public WebElement signin;
 
-	@FindBy(how = How.CLASS_NAME, using = "modalIframe")
+	@FindBy(how = How.CLASS_NAME, using = "modalIframe") // classname locator
 	public WebElement mframe;
 
 	@FindBy(how = How.XPATH, using = "//body[1]/div[1]/div[1]/div[2]/div[1]/div[1]/div[8]/div[1]")
@@ -38,37 +40,34 @@ public class LoginPage {
 
 	@FindBy(how = How.XPATH, using = "//body/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/span[1]/section[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/input[1]")
 	public WebElement password;
-	
+
 	@FindBy(how = How.XPATH, using = "//div[@id='confirm_yes']")
 	public WebElement confirm;
-	
+
 	@FindBy(how = How.XPATH, using = "//body/div[6]/div[1]/div[2]/div[1]/div[1]/div[2]/i[1]")
 	public WebElement cross;
-	
+
 	@FindBy(how = How.XPATH, using = "//li[@id='signOutLink']")
 	public WebElement signout;
-	
+
 	@FindBy(how = How.XPATH, using = "//body/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[1]/div[2]/div[1]/div[1]/div[1]/form[1]/span[1]/section[1]/div[1]/div[1]/div[1]/div[2]")
 	public WebElement incorrectpswd;
-	
-	@FindBy(how = How.XPATH, using = " //li[contains(text(),'My Profile')]")  
+
+	@FindBy(how = How.XPATH, using = " //li[contains(text(),'My Profile')]")
 	public WebElement myprofile;
-	
+
 	@FindBy(how = How.XPATH, using = "//span[@id='Editbtn']")
 	public WebElement editbtn;
-	
+
 	@FindBy(how = How.XPATH, using = "//li[contains(text(),'My Trips')]")
 	public WebElement mytrips;
-	
+
 	@FindBy(how = How.XPATH, using = "//li[contains(text(),'Wallets/Cards')]")
 	public WebElement wallets_cards;
-	
+
 	@FindBy(how = How.XPATH, using = "//div[contains(text(),'Your Wallet Balance')]")
 	public WebElement wallettxt;
-	
-	
-	
-	
+
 	public void icon_click() {
 		signinicon.click();
 	}
@@ -85,45 +84,38 @@ public class LoginPage {
 		nextbtn.click();
 	}
 
-	public void confirm_click()
-	{
+	public void confirm_click() {
 		confirm.click();
 	}
-	
-	public void cross_click()
-	{
+
+	public void cross_click() {
 		cross.click();
+		WebDriverWait wait = new WebDriverWait(driver,30);
+		wait.until(ExpectedConditions.visibilityOf(signinicon));  //explicit wait
 	}
-	
-	public void signout_click()
-	{
+
+	public void signout_click() {
 		signout.click();
 	}
-	
-	public String incorrectpswd_txt()
-	{
+
+	public String incorrectpswd_txt() {
 		return incorrectpswd.getText();
 	}
-	
-	public void myprofile_click()
-	{
+
+	public void myprofile_click() {
 		myprofile.click();
 	}
-	
-	public void mytrips_click()
-	{
+
+	public void mytrips_click() {
 		mytrips.click();
 	}
-	
-	public void walletsAndcards_click()
-	{
+
+	public void walletsAndcards_click() {
 		wallets_cards.click();
 	}
-	
-	public String wallet_txt()
-	{
+
+	public String wallet_txt() {
 		return wallettxt.getText();
 	}
-	
 
 }

@@ -1,48 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="4" total="5" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="5" passed="3" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2021-07-05T05:49:15Z" name="Default suite" finished-at="2021-07-05T05:49:55Z" duration-ms="39953">
+  <suite started-at="2021-07-05T16:40:48Z" name="Suite" finished-at="2021-07-05T16:41:06Z" duration-ms="18102">
     <groups>
     </groups>
-    <test started-at="2021-07-05T05:49:15Z" name="Default test" finished-at="2021-07-05T05:49:55Z" duration-ms="39953">
-      <class name="com.redbus.tests.LoginTest">
-        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.redbus.tests.LoginTest@24ba9639]" started-at="2021-07-05T05:49:15Z" name="setExtent" finished-at="2021-07-05T05:49:15Z" duration-ms="252" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setExtent -->
-        <test-method is-config="true" signature="Initialize()[pri:0, instance:com.redbus.tests.LoginTest@24ba9639]" started-at="2021-07-05T05:49:15Z" name="Initialize" finished-at="2021-07-05T05:49:17Z" duration-ms="2515" status="PASS">
+    <test started-at="2021-07-05T16:40:48Z" name="classes" finished-at="2021-07-05T16:41:06Z" duration-ms="18102">
+      <class name="com.redbus.tests.BusTicketTest">
+        <test-method is-config="true" signature="Initialize()[pri:0, instance:com.redbus.tests.BusTicketTest@7a1234bf]" started-at="2021-07-05T16:40:48Z" name="Initialize" finished-at="2021-07-05T16:40:49Z" duration-ms="732" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Initialize -->
-        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.redbus.tests.LoginTest@24ba9639]" started-at="2021-07-05T05:49:17Z" name="openBrowser" finished-at="2021-07-05T05:49:20Z" duration-ms="2678" status="PASS">
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.redbus.tests.BusTicketTest@7a1234bf]" started-at="2021-07-05T16:40:49Z" name="openBrowser" finished-at="2021-07-05T16:40:51Z" duration-ms="2650" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openBrowser -->
-        <test-method signature="ViewMyProfile()[pri:0, instance:com.redbus.tests.LoginTest@24ba9639]" started-at="2021-07-05T05:49:20Z" name="ViewMyProfile" finished-at="2021-07-05T05:49:54Z" duration-ms="33405" status="PASS">
+        <test-method signature="BusTickets()[pri:0, instance:com.redbus.tests.BusTicketTest@7a1234bf]" started-at="2021-07-05T16:40:51Z" name="BusTickets" finished-at="2021-07-05T16:40:57Z" duration-ms="5474" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- ViewMyProfile -->
-        <test-method is-config="true" signature="report(org.testng.ITestResult)[pri:0, instance:com.redbus.tests.LoginTest@24ba9639]" started-at="2021-07-05T05:49:54Z" name="report" finished-at="2021-07-05T05:49:54Z" duration-ms="13" status="PASS">
+        </test-method> <!-- BusTickets -->
+        <test-method is-config="true" signature="report(org.testng.ITestResult)[pri:0, instance:com.redbus.tests.BusTicketTest@7a1234bf]" started-at="2021-07-05T16:40:57Z" name="report" finished-at="2021-07-05T16:40:57Z" duration-ms="2" status="PASS">
           <params>
             <param index="0">
               <value>
-                <![CDATA[[TestResult name=ViewMyProfile status=SUCCESS method=LoginTest.ViewMyProfile()[pri:0, instance:com.redbus.tests.LoginTest@24ba9639] output={null}]]]>
+                <![CDATA[[TestResult name=BusTickets status=SUCCESS method=BusTicketTest.BusTickets()[pri:0, instance:com.redbus.tests.BusTicketTest@7a1234bf] output={null}]]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- report -->
-        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.redbus.tests.LoginTest@24ba9639]" started-at="2021-07-05T05:49:54Z" name="closeBrowser" finished-at="2021-07-05T05:49:55Z" depends-on-methods="com.redbus.tests.BaseTest.report" duration-ms="1054" status="PASS">
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.redbus.tests.BusTicketTest@7a1234bf]" started-at="2021-07-05T16:40:57Z" name="closeBrowser" finished-at="2021-07-05T16:40:57Z" depends-on-methods="com.redbus.tests.BaseTest.report" duration-ms="66" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- closeBrowser -->
-        <test-method is-config="true" signature="endReport()[pri:0, instance:com.redbus.tests.LoginTest@24ba9639]" started-at="2021-07-05T05:49:55Z" name="endReport" finished-at="2021-07-05T05:49:55Z" duration-ms="560" status="PASS">
+      </class> <!-- com.redbus.tests.BusTicketTest -->
+      <class name="com.redbus.tests.RPoolFunctionalityTest">
+        <test-method is-config="true" signature="setExtent()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:40:48Z" name="setExtent" finished-at="2021-07-05T16:40:48Z" duration-ms="162" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setExtent -->
+        <test-method is-config="true" signature="Initialize()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:40:48Z" name="Initialize" finished-at="2021-07-05T16:40:57Z" duration-ms="9176" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:40:57Z" name="openBrowser" finished-at="2021-07-05T16:40:59Z" duration-ms="1601" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="RPool()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:40:59Z" name="RPool" finished-at="2021-07-05T16:41:01Z" duration-ms="1746" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- RPool -->
+        <test-method is-config="true" signature="report(org.testng.ITestResult)[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:41:01Z" name="report" finished-at="2021-07-05T16:41:01Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=RPool status=SUCCESS method=RPoolFunctionalityTest.RPool()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:41:01Z" name="closeBrowser" finished-at="2021-07-05T16:41:01Z" depends-on-methods="com.redbus.tests.BaseTest.report" duration-ms="62" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="Initialize()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:41:01Z" name="Initialize" finished-at="2021-07-05T16:41:01Z" duration-ms="230" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Initialize -->
+        <test-method is-config="true" signature="openBrowser()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:41:01Z" name="openBrowser" finished-at="2021-07-05T16:41:04Z" duration-ms="3413" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openBrowser -->
+        <test-method signature="siteOnGooglePlay()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:41:04Z" name="siteOnGooglePlay" finished-at="2021-07-05T16:41:06Z" duration-ms="1621" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- siteOnGooglePlay -->
+        <test-method is-config="true" signature="report(org.testng.ITestResult)[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:41:06Z" name="report" finished-at="2021-07-05T16:41:06Z" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=siteOnGooglePlay status=SUCCESS method=RPoolFunctionalityTest.siteOnGooglePlay()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- report -->
+        <test-method is-config="true" signature="closeBrowser()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:41:06Z" name="closeBrowser" finished-at="2021-07-05T16:41:06Z" depends-on-methods="com.redbus.tests.BaseTest.report" duration-ms="61" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeBrowser -->
+        <test-method is-config="true" signature="endReport()[pri:0, instance:com.redbus.tests.RPoolFunctionalityTest@2b76ff4e]" started-at="2021-07-05T16:41:06Z" name="endReport" finished-at="2021-07-05T16:41:06Z" duration-ms="246" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- endReport -->
-      </class> <!-- com.redbus.tests.LoginTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      </class> <!-- com.redbus.tests.RPoolFunctionalityTest -->
+    </test> <!-- classes -->
+  </suite> <!-- Suite -->
 </testng-results>

@@ -3,17 +3,17 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="com.redbus.tests.LoginTest">
+      <class name="com.redbus.tests.RPoolFunctionalityTest">
         <methods>
           <include name="report"/>
           <include name="setExtent"/>
           <include name="endReport"/>
+          <include name="siteOnGooglePlay"/>
           <include name="Initialize"/>
           <include name="openBrowser"/>
-          <include name="ValidLoginFunctionality"/>
           <include name="closeBrowser"/>
         </methods>
-      </class> <!-- com.redbus.tests.LoginTest -->
+      </class> <!-- com.redbus.tests.RPoolFunctionalityTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

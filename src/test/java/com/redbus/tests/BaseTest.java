@@ -5,22 +5,21 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.MalformedURLException;
-import java.net.URL;
+
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.ie.InternetExplorerDriver;
-import org.openqa.selenium.remote.DesiredCapabilities;
-import org.openqa.selenium.remote.RemoteWebDriver;
+
 import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.log4testng.Logger;
 
@@ -31,7 +30,7 @@ import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
 public class BaseTest {
-	static WebDriver driver=null;
+	static WebDriver driver = null;
 	public static String winHandleBefore;
 	public static ExtentReports extent;
 	public static ExtentTest extentTest;
@@ -59,20 +58,20 @@ public class BaseTest {
 		}
 	}
 
-	public static void changeWindow() {
+	public static void changeWindow() { // method to switch to other window
 		winHandleBefore = driver.getWindowHandle();
 		for (String winHandle : driver.getWindowHandles()) {
 			driver.switchTo().window(winHandle);
 		}
 	}
 
-	public void closeWindow() {
+	public void closeWindow() { // method to close other opened window
 		driver.close();
 		driver.switchTo().window(winHandleBefore);
 	}
 
 	@BeforeTest
-	public void setExtent() {
+	public void setExtent() { // Extent reporting
 		extent = new ExtentReports(".\\Reports\\ExtentReport.html");
 		extent.addSystemInfo("Host Name", "Ritika Jain");
 		extent.addSystemInfo("User Name", "Ritika1008");
@@ -86,7 +85,7 @@ public class BaseTest {
 	}
 
 	@AfterMethod
-	public void report(ITestResult result) {
+	public void report(ITestResult result) { // Reporting logs & Screenshot
 		if (result.getStatus() == ITestResult.FAILURE) {
 			extentTest.log(LogStatus.FAIL, "Test case Failed");
 			String screenshotPath = Screenshot.takeScreenShot(driver, result.getName());
@@ -96,27 +95,25 @@ public class BaseTest {
 		} else if (result.getStatus() == ITestResult.SUCCESS) {
 			extentTest.log(LogStatus.PASS, "Test case Passed Successfully");
 		}
-		extent.endTest(extentTest);
+		//extent.endTest(extentTest);
 
 	}
 
-
 	@BeforeMethod
 	public static void Initialize() throws MalformedURLException {
-		if (prop.getProperty("Browser").equalsIgnoreCase("Chrome"))
-		/*{
-			driver = DockerRunnable.runInDocker();
-			
-		}*/
-		{
-			System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe"); // for Chrome browser
-			if (prop.getProperty("Mode").equalsIgnoreCase("Headless")) // for headless mode
-			{
-				ChromeOptions options = new ChromeOptions();
-				options.addArguments("--headless");
-				driver = new ChromeDriver(options);
+		if (prop.getProperty("Browser").equalsIgnoreCase("Chrome")) {
+			if (prop.getProperty("DockerRun").equalsIgnoreCase("Yes")) {
+				driver = DockerRunnable.runInDocker();
 			} else {
-				driver = new ChromeDriver();
+				System.setProperty("webdriver.chrome.driver", ".\\Drivers\\chromedriver.exe"); // for Chrome browser
+				if (prop.getProperty("Mode").equalsIgnoreCase("Headless")) // for headless mode
+				{
+					ChromeOptions options = new ChromeOptions();
+					options.addArguments("--headless");
+					driver = new ChromeDriver(options);
+				} else {
+					driver = new ChromeDriver();
+				}
 			}
 		} else if (prop.getProperty("Browser").equalsIgnoreCase("Firefox")) {
 			System.setProperty("webdriver.gecko.driver", ".\\Drivers\\geckodriver.exe");// for firefox browser
@@ -131,14 +128,14 @@ public class BaseTest {
 
 	@BeforeMethod
 	public static void openBrowser() {
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("url")); // fetching url from config file
 		driver.manage().window().maximize();
 	}
 
 	@AfterMethod(dependsOnMethods = "report")
 	public static void closeBrowser() {
+		extent.endTest(extentTest);
 		driver.quit();
-
 	}
 
 }

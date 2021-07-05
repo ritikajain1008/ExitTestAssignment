@@ -1,2 +1,9 @@
-2021-07-05 11:19:36,424  INFO [main] LoginTest117 - **********************User is successfully logged in************************
-2021-07-05 11:19:54,079  INFO [main] LoginTest131 - **********************User can edit his/her profile************************
+2021-07-05 22:54:28,426  INFO [TestNG-test=classes-2] BusTicketTest22 - *************Search Buses from one location to other************
+2021-07-05 22:54:28,426  INFO [TestNG-test=classes-5] HomePageFunctionality123 - **********************Need Any Help?*************************************
+2021-07-05 22:54:51,641  INFO [TestNG-test=classes-3] BusHireTest92 - *******************Hire Vehicle for outstation*****************************
+2021-07-05 22:54:54,618  INFO [TestNG-test=classes-5] HomePageFunctionality40 - ******************Available Amazon Pay Offers are displayed********************
+2021-07-05 22:55:09,810  INFO [TestNG-test=classes-1] RPoolFunctionalityTest37 - **************Application can be installed for given site from google play store***********
+2021-07-05 22:55:34,062  INFO [TestNG-test=classes-5] HomePageFunctionality111 - ************************Cancel Booked Tickets***************************
+2021-07-05 22:55:57,462  INFO [TestNG-test=classes-3] BusHireTest26 - ************************Available Mini Buses are displayed***************************
+2021-07-05 22:56:20,324  INFO [TestNG-test=classes-3] BusHireTest84 - ***********************Available Offers on Booking are displayed*********************
+2021-07-05 22:56:35,997  INFO [TestNG-test=classes-3] BusHireTest41 - *************************Available Tempo Traveller are displayed*************************
